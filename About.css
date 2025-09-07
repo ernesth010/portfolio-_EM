@@ -1,0 +1,32 @@
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+    color: #eeecec;
+}
+body{
+    background-color:rgb(20, 20, 59);
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.social-icons{
+    margin-top: 10rem;
+    margin-left: 36rem;
+}
+.social-icons img:hover {
+    opacity: 1;  /* Brightens icons on hover */
+}
