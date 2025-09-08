@@ -23,10 +23,9 @@ nav {
     width: 90%;
     margin: auto;
 }
-
 .logo {
     font-size: 1.5rem;
-    margin-left: -50rem;
+    margin-left: -40rem;
 }
 
 .logo span {
@@ -91,18 +90,38 @@ section p{
 .image-container{
     position: relative;
     display: flex;
-    margin-left: 49rem;
-    margin-top: -20rem;
+    margin-left: 52rem;
+    margin-top: -10rem;
     /* font-size: 3em; */
 }
 .glow-circle{
-    border-radius: 50%;
-    padding: 5px;
-    background: radial-gradient(circle, #00ff9d, #0a0a0a );
+    /* border-radius:; */
+    padding: 2px;
+    background: conic-gradient(from 0deg, #00ff9d, #00bcd4, #ff00c8, #00ff9d);
+    border-radius: inherit;
+    z-index: -1;
     display: inline-block;
-   animation: glowMove 6s infinite linear;
+   animation: glowMove 20s infinite linear;
    ;
-}
+} 
+/* @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: true;
+} */
+/* .glow-circle::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+     background: conic-gradient(from 0deg, #00ff9d, #00bcd4, #ff00c8, #00ff9d);
+    border-radius: inherit;
+    background: #0a0a0a;
+    z-index: -1;
+    padding: 2px;
+    animation: glowMove 20s infinite linear;
+} */
 .glow-circle img {
     width: 300px;
     height: 300px;
@@ -113,12 +132,11 @@ section p{
     }
 @keyframes glowMove {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 50%; 
+        transform: translate(-50%, -50%) rotate(0deg);
     }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
+        100% {
         background-position: 0% 50%;
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
