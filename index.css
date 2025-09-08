@@ -79,9 +79,11 @@ section{
 }
 .name{
     color: aliceblue;
+    
 } .name span{
     color: #00ff9d;
-}
+   }
+
 section p{
     color: #ccc;
     max-width: 500px;

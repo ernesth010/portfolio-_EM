@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Text Rotation</title>
+  <style>
+    .wrapper {
+      font-size: 28px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    .words {
+      overflow: hidden;
+      height: 1.2em; /* keeps size fixed */
+    }
+
+    .words span {
+      display: block;
+      animation: rotateWords 6s infinite;
+    }
+
+    @keyframes rotateWords {
+      0% { transform: translateY(0%); }
+      25% { transform: translateY(-100%); }
+      50% { transform: translateY(-200%); }
+      75% { transform: translateY(-100%); }
+      100% { transform: translateY(0%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    I am a&nbsp;
+    <div class="words">
+      <span>Developer</span>
+      <span>Designer</span>
+      <span>Freelancer</span>
+    </div>
+  </div>
+</body>
+</html>
